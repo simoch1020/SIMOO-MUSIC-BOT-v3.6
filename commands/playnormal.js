@@ -1,12 +1,12 @@
 const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
 const db = require("../mongoDB");
 module.exports = {
-  name: "playsong",
+  name: "DIR",
   description: "Play a track.",
   permissions: "0x0000000000000800",
   options: [
     {
-      name: "normal",
+      name: "HNA",
       description: "Open music from other platforms.",
       type: ApplicationCommandOptionType.Subcommand,
       options: [
@@ -131,7 +131,7 @@ module.exports = {
         }
       }
 
-      if (stp === "normal") {
+      if (stp === "HNA") {
   const name = interaction.options.getString('name');
   if (!name) {
     return interaction.reply({ content: '▶️ Give Text or link', ephemeral: true }).catch(e => {});
@@ -139,7 +139,7 @@ module.exports = {
 
   const embed = new EmbedBuilder()
     .setColor('#FF0000')
-    .setDescription('**🎸 Get ready for a musical journey!**');
+    .setDescription('**🎸 HNA KAN9ALEB AZAMEL!**');
 
   await interaction.reply({ embeds: [embed] }).catch(e => {});
 
